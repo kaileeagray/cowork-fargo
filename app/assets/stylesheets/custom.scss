@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 60px;
+
+
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  padding-top: 9px;
+  font-weight: bold;
+  font-family: 'Bungee Shade', cursive;
+}
+#logo:hover {
+  color: #428bca;
+  text-decoration: none;
+}
