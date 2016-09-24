@@ -1,6 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
+    <%if !root_path%>
     <%= link_to "Cowork Fargo", root_path, id: "logo" %>
+    <%end%>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Coworkers to Follow", '#'%></li>

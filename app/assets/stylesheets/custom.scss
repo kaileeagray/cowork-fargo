@@ -28,3 +28,60 @@ textarea {
   color: #428bca;
   text-decoration: none;
 }
+
+.jumbotronTransp {
+ padding: 30px;
+ margin-bottom: 30px;
+ font-size: 21px;
+ font-weight: 200;
+ line-height: 2.1428571435;
+ background-image: url('group_meet.jpeg');
+ background-size: cover;
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255, 255, 255,0.6) 100%), url('group_meet.jpeg');
+
+ h1 {
+   font-size: 2.7em;
+   color: #fff;
+   padding-top: 9px;
+   font-weight: bold;
+   font-family: 'Bungee Shade', cursive;
+ }
+ p {
+   font-size: 1em;
+   color: black;
+   text-shadow: 0.25px 0.25px $gray-light;
+   font-weight: bold;
+   opacity: none;
+ }
+}
+
+/*footer*/
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
