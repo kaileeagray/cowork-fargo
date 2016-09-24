@@ -1,21 +1,40 @@
 <% provide(:title, "Contact") %>
-<div class="">
-<h1 >Contact</h1>
-  <div >
-    <%= link_to "https://www.linkedin.com/in/kailee-gray-77337833" do %>
-      <%= image_tag 'linkedin.png' %>
-    <% end %>
-    <%= link_to "http://www.facebook.com/kailee.gray" do %>
-      <%= image_tag 'facebook.png' %>
-    <% end %>
-    <%= link_to "http://www.twitter.com/kaileeagray" do %>
-      <%= image_tag 'twitter.png' %>
-    <% end %>
-    <%= link_to "https://learn.co/kaileeagray" do %>
-      <%= image_tag 'learn.png' %>
-    <% end %>
-    <%= link_to "http://freecodecamp.com/kaileeagray" do %>
-      <%= image_tag 'freecodecamp.png' %>
-    <% end %>
-  </div>
+<div class="container-fluid" id="contact">
+  <h1 >Contact</h1>
+  <div class="row">
+    <div class="col-md-4">  </div>
+    <div class="col-md-4">
+    <ul>
+      <li>
+      <%= link_to "https://www.linkedin.com/in/kailee-gray-77337833" do %>
+        <%= image_tag 'linkedin.png' %>
+      <% end %>
+      </li>
+      <li>
+        <%= link_to "http://www.facebook.com/kailee.gray" do %>
+          <%= image_tag 'facebook.png' %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "http://www.twitter.com/kaileeagray" do %>
+          <%= image_tag 'twitter.png' %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "https://learn.co/kaileeagray" do %>
+          <%= image_tag 'learn.png' %>
+        <% end %>
+    </li>
+    <li>
+        <%= link_to "http://freecodecamp.com/kaileeagray" do %>
+          <%= image_tag 'fcc.png' %>
+        <% end %>
+    </li>
+  </ul>
+</div>
+
+  <div class="col-md-4">  </div>
+
+</div>
+
 </div>
