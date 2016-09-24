@@ -1,39 +1,35 @@
 <% provide(:title, "Contact") %>
 <div class="container-fluid container-static" id="contact">
-  <div class="row">
-    <div class="col-md-8">
-      <h1 >Contact</h1>
-    <ul>
-      <li>
+  <h1 >Contact</h1>
+    <table>
+
+      <tr>
+    <td>
       <%= link_to "https://www.linkedin.com/in/kailee-gray-77337833", target:"_blank", rel:"noopener no referrer" do %>
         <%= image_tag 'linkedin.png' %>
       <% end %>
-      </li>
-      <li>
+      </td>
+      <td>
         <%= link_to "http://www.facebook.com/kailee.gray", target:"_blank", rel:"noopener no referrer" do %>
           <%= image_tag 'facebook.png' %>
         <% end %>
-      </li>
-      <li>
+      </td>
+      <td>
         <%= link_to "http://www.twitter.com/kaileeagray", target:"_blank", rel:"noopener no referrer" do %>
           <%= image_tag 'twitter.png' %>
         <% end %>
-      </li>
-      <li>
+      </td>
+      <td>
         <%= link_to "https://learn.co/kaileeagray", target:"_blank", rel:"noopener no referrer" do %>
           <%= image_tag 'learn.png' %>
         <% end %>
-    </li>
-    <li>
+    </td>
+    <td>
         <%= link_to "http://freecodecamp.com/kaileeagray", target:"_blank", rel:"noopener no referrer" do %>
           <%= image_tag 'fcc.png' %>
         <% end %>
-    </li>
-  </ul>
-</div>
+    </td>
+  </tr>
 
-  <div class="col-md-4">  </div>
-
-</div>
-
+</table>
 </div>

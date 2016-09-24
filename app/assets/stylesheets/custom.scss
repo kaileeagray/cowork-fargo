@@ -81,6 +81,10 @@ h2 {
       color: $gray-darker;
       background-color: transparent;
     }
+    &:active {
+      color: $gray-darker;
+      background-color: transparent;
+    }
   }
 }
 
@@ -146,14 +150,22 @@ h2 {
     padding-bottom: 15px;
   }
 
+  img {
 
-    ul {
-      list-style: none;
-      li {
-        float: left;
-        margin-right: 15px;
   }
-}
+
+  ul {
+    list-style: none;
+    li {
+    display: table-cell;
+    }
+  }
+
+  table {
+    td {
+      padding-right: 20px;
+    }
+  }
 }
 
 /*footer*/
@@ -196,8 +208,9 @@ footer {
    font-family: 'Bungee Shade', cursive;
  }
  h2 {
-   font-size: 2.7em;
+   font-size: 3em;
    font-weight: bold;
+   letter-spacing: 1px;
  }
  p {
    font-size: 2em;
