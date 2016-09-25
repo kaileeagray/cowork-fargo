@@ -1,22 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@checkin.latitude},#{@checkin.longitude}&zoom=10&size=300x400&markers=color:black%7C#{@checkin.latitude},#{@checkin.longitude}" %>
+<div class="row">
+    <div class="col-md-6 map_box">
+      <%= static_map_for(@checkin) %>
     </div>
 
   <div class="col-md-6">
-    <div class="row">
       <h2><%= @checkin.name %></h2>
-      <p><%= @checkin.user.email%></p>
       <p><%= @checkin.address %></p>
-      <p>Latitude: <%= @checkin.latitude %></p>
-      <p>Longitude: <%= @checkin.longitude %></p>
+      <p><%= @checkin.description %></p>
 
       <%= link_to "Edit", edit_checkin_path(@checkin), class: "btn btn-primary" %>
       <%= link_to "Back", checkins_path, class: "btn btn-primary" %>
-    </div>
-
   </div>
-
-</div>
 </div>

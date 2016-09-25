@@ -1,37 +1,57 @@
-<div class="container">
-  <div class="col-md-6">
+<% if current_page?(root_path)%>
+<div class="jumbotronTransp">
+  <div class="row">
+    <div class="col-md-9">
+      <h1>Cowork Fargo</h1>
+    </div>
+
+    <div class="col-md-3 ">
+      <%= link_to "Join the community!", signup_path, class: "btn btn-primary btn-block btn-lg"%>
+    </div>
+  </div>
+  <h3>Connecting remote workers and students in the
+    Fargo, Moorhead, West Fargo area.</h3>
+</div>
+<div class="container-static">
+<% end%>
+
+<div class="row checkins">
+  <div class="col-md-7">
     <div id="map" style='width: 100%; height: 600px;'></div>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-5">
 
     <%= link_to new_checkin_path do %>
-      <button class="btn btn-warning">New</button>
+      <button class="btn btn-warning">Add Your Coworking Location</button>
     <% end %>
 
     <hr>
 
+    <table>
+
     <% @checkins.each do |checkin| %>
 
-      <div class="row-fluid">
-        <h3><%= checkin.name %></h3>
+      <tr>
+        <h3> <%= gravatar_for(checkin.user, size: 50 )%>
+          <%= checkin.name %>
+        </h3>
+        <h4><%= checkin.user.name %></h4>
+
         <p><%= checkin.address %></p>
-        <p>Latitude: <%= checkin.latitude %></p>
-        <p>Longitude: <%= checkin.longitude %></p>
 
-        <%= link_to "Show", checkin, class: "btn btn-primary" %>
-        <%= link_to "Edit", edit_checkin_path(checkin), class: "btn btn-primary" %>
-        <%= link_to "Delete", checkin, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-primary" %>
-
-      </div>
-
+        <p><%= checkin.description %></p>
+      </tr>
     <% end %>
+  </table>
 
 
   </div>
 
 </div>
-
+<% if current_page?(root_path)%>
+</div>
+<% end %>
 
 <% content_for(:after_js) do %>
   <script type="text/javascript">

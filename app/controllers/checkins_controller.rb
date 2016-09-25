@@ -32,7 +32,7 @@ class CheckinsController < ApplicationController
   def create
     @checkin = Checkin.new(checkin_params)
     if @checkin.save
-      redirect_to checkins_path, notice: 'Checkin was successfully created.'
+      redirect_to root_path, notice: 'Checkin was successfully created.'
     else
       render action: 'new'
     end
@@ -66,6 +66,6 @@ class CheckinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def checkin_params
-      params.require(:checkin).permit(:name, :address, :user_id)
+      params.require(:checkin).permit(:name, :address, :user_id, :description)
     end
 end
