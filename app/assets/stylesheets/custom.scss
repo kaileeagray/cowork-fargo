@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Bungee+Shade|Khand';
+
+@import "bootstrap-variables.scss";
+@import "bootstrap-sprockets.scss";
+@import "bootstrap.scss";
+
 $gray-medium-light: #eaeaea;
 $biz-green: rgb(59, 133, 55);
 $shirt-yellow: rgb(224, 186, 86);
@@ -33,15 +38,14 @@ textarea {
     resize: vertical;
 }
 
-h1,
-h2 {
+h1, h2, h3 {
     font-family: 'Khand', sans-serif;
     color: $gray-darker;
     font-weight: bold;
     line-height: 1;
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
     font-family: "Circular", "Avenir Next", sans-serif;
 }
 
@@ -144,7 +148,6 @@ h2 {
     background: rgb(245, 245, 245);
     /* This is for ie8 and below */
     background: rgba(245, 245, 245, 0.65);
-    @include shadow(0.5);
 
     a {
         text-decoration: none;
@@ -214,8 +217,18 @@ footer {
     }
 
     h2 {
-        font-size: 3em;
+        padding-top: 0;
+        padding-bottom: 25px;
+        margin: -12px;
+        font-size: 4em;
         font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 4em;
+        font-weight: bold;
+        font-size: 4em;
         letter-spacing: 1px;
     }
 
@@ -252,4 +265,13 @@ input {
         color: $state-danger-text;
         border-width: 5px;
     }
+}
+
+#map {
+  height: 100%;
+}
+
+.form-horizontal {
+  float: left;
+  clear: both;
 }

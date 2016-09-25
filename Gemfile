@@ -16,7 +16,8 @@ gem 'jquery-rails',            '4.1.1'
 gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.4.1'
 gem 'json'
-
+gem 'bootstrap-generators'
+gem 'record_tag_helper'
 
 gem 'geocoder'
 gem 'gmaps4rails'

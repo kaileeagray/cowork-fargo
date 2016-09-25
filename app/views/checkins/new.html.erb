@@ -1,5 +1,19 @@
-<h1>New Checkin</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>New checkin</h2>
 
-<%= render 'form', checkin: @checkin %>
+    </div>
+    <div class="col-md-2">
+      <%= link_to checkins_path, class: 'btn btn-default' do %>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        Back
+      <% end %>
+    </div>
 
-<%= link_to 'Back', checkins_path %>
+
+
+</div>
+
+<%= render 'form' %>
+</div>
