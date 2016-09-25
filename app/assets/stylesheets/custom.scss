@@ -238,15 +238,15 @@ footer {
     }
 }
 
-.uneditable-input, input, select, textarea {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-    @include box_sizing;
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }
 
 input {
-    height: auto !important;
+  height: auto !important;
 }
 
 #error_explanation {
@@ -271,7 +271,8 @@ input {
   height: 100%;
 }
 
-.form-horizontal {
-  float: left;
+form {
   clear: both;
+  display: inline-block;
+
 }
