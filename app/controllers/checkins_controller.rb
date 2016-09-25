@@ -4,7 +4,13 @@ class CheckinsController < ApplicationController
   # GET /checkins
   # GET /checkins.json
   def index
-    @checkins = Checkin.all
+    @checkins = Checkin.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@checkins) do |checkin, marker|
+      marker.lat checkin.latitude
+      marker.lng checkin.longitude
+      marker.infowindow render_to_string(partial: "/maps/map_box", locals: { checkin: checkin })
+    end
   end
 
   # GET /checkins/1
@@ -12,7 +18,7 @@ class CheckinsController < ApplicationController
   def show
   end
 
-  # GET /checkins/new
+  # GET /check_ins/new
   def new
     @checkin = Checkin.new
   end
@@ -25,29 +31,20 @@ class CheckinsController < ApplicationController
   # POST /checkins.json
   def create
     @checkin = Checkin.new(checkin_params)
-
-    respond_to do |format|
-      if @checkin.save
-        format.html { redirect_to @checkin, notice: 'Checkin was successfully created.' }
-        format.json { render :show, status: :created, location: @checkin }
-      else
-        format.html { render :new }
-        format.json { render json: @checkin.errors, status: :unprocessable_entity }
-      end
+    if @checkin.save
+      redirect_to checkins_path, notice: 'Checkin was successfully created.'
+    else
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /checkins/1
   # PATCH/PUT /checkins/1.json
   def update
-    respond_to do |format|
-      if @checkin.update(checkin_params)
-        format.html { redirect_to @checkin, notice: 'Checkin was successfully updated.' }
-        format.json { render :show, status: :ok, location: @checkin }
-      else
-        format.html { render :edit }
-        format.json { render json: @checkin.errors, status: :unprocessable_entity }
-      end
+    if @checkin.update(checkin_params)
+      redirect_to @checkin, notice: 'Checkin was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 
@@ -56,7 +53,7 @@ class CheckinsController < ApplicationController
   def destroy
     @checkin.destroy
     respond_to do |format|
-      format.html { redirect_to checkins_url, notice: 'Checkin was successfully destroyed.' }
+      format.html { redirect_to checkins_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +66,6 @@ class CheckinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def checkin_params
-      params.require(:checkin).permit(:latitude, :longitude, :name, :address, :start, :user_id)
+      params.require(:checkin).permit(:name, :address, :user_id)
     end
 end
