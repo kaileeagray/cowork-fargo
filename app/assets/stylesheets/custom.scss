@@ -1,247 +1,264 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Bungee+Shade|Khand';
-
-
 $gray-medium-light: #eaeaea;
 $biz-green: rgb(59, 133, 55);
 $shirt-yellow: rgb(224, 186, 86);
 $tan: #F1F0CD;
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 @mixin shadow($size) {
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
-  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, $size);
 }
 
 body {
-  font-family: "Circular", "Avenir Next", sans-serif;
-  padding-top: 75px;
-  padding-bottom: 70px;
-  background-image: image-url("old_mathematics.png");
-  background-repeat: repeat;
+    font-family: "Circular", "Avenir Next", sans-serif;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: image-url("old_mathematics.png");
+    background-repeat: repeat;
 }
 
 section {
-  overflow: auto;
+    overflow: auto;
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
-h1, h2 {
-  font-family: 'Khand', sans-serif;
-  color: $gray-darker;
-  font-weight: bold;
-  line-height: 1;
+h1,
+h2 {
+    font-family: 'Khand', sans-serif;
+    color: $gray-darker;
+    font-weight: bold;
+    line-height: 1;
 }
 
-h3, h4, h5, h6 {
-  font-family: "Circular", "Avenir Next", sans-serif;
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Circular", "Avenir Next", sans-serif;
 }
-
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -1px;
-  font-weight: bold;
+    font-size: 3em;
+    letter-spacing: -1px;
+    font-weight: bold;
 }
 
 h2 {
-  font-size: 2em;
-  letter-spacing: -0.5px;
-  font-weight: normal;
-  color: $gray;
+    font-size: 2em;
+    letter-spacing: -0.5px;
+    font-weight: normal;
+    color: $gray;
 }
 
-
-
 .navbar {
-  background-color: $shirt-yellow;
-  border: none;
-  @include shadow(0.25);
+    background-color: $shirt-yellow;
+    border: none;
+    @include shadow(0.25);
 
-  ul {
-  }
-  .navbar-right a {
-    padding-top: 23px;
+    .navbar-right a {
+        padding-top: 20px;
+        color: $tan;
+        font-weight: bold;
+        font-size: 1.7em;
+        font-family: 'Khand', sans-serif;
+        &:hover {
+            color: $gray-darker;
+            background-color: transparent;
+        }
 
-    color: $tan;
-    font-weight: bold;
-    font-size: 1.5em;
-    font-family: 'Khand', sans-serif;
-    &:hover {
-      color: $gray-darker;
-      background-color: transparent;
+        &:active {
+            color: $gray-darker;
+            background-color: transparent;
+        }
     }
-    &:active {
-      color: $gray-darker;
-      background-color: transparent;
-    }
-  }
 }
 
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 2em;
-  color: #fff;
-  padding-top: 9px;
-  padding-bottom: 19px;
-  font-family: 'Bungee Shade', cursive;
-  &:hover {
-    text-decoration: none;
-    color: $gray-darker;
-  }
+    float: left;
+    margin-right: 10px;
+    font-size: 2.7em;
+    color: $gray;
+    padding-bottom: 10px;
+    font-family: 'Bungee Shade', cursive;
+
+    &:hover {
+        text-decoration: none;
+        color: black;
+    }
 }
-
 @media (max-width: 767px) {
-  body {
-    margin-top: 150px;
-  }
+    body {
+        margin-top: 100px;
+    }
 
-  .navbar-right  {
-    clear: both;
-  }
+    .navbar-right {
+        clear: both;
+    }
 }
 
 .jumbotronTransp {
- padding: 30px;
- margin-bottom: 30px;
- font-size: 21px;
- font-weight: 200;
- line-height: 2.1428571435;
- background-image: url('group_meet.jpeg');
- background-size: cover;
- background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255, 255, 255,0.6) 100%), image-url('group_meet.jpeg');
-  @include shadow(0.25);
- h1 {
-   font-size: 2.7em;
-   color: #fff;
-   padding-top: 9px;
-   font-weight: bold;
-   font-family: 'Bungee Shade', cursive;
- }
- p {
-   font-size: 1em;
-   color: $gray-darker;
-   text-shadow: 0.25px 0.25px $gray-light;
-   font-weight: bold;
-   opacity: none;
- }
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    padding-top: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    padding-bottom: 7px;
+    font-size: 21px;
+    background-image: url('group_meet.jpeg');
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255, 255, 255,0.6) 100%), image-url('group_meet.jpeg');
+    font-weight: bold;
+    @include shadow(0.25);
+
+    h1 {
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 2.7em;
+        color: #fff;
+        font-weight: bold;
+        font-family: 'Bungee Shade', cursive;
+        padding-bottom: 0;
+    }
+
+    p {
+        font-size: 1em;
+        color: $gray-darker;
+        text-shadow: 0.25px 0.25px $gray-light;
+        font-weight: bold;
+        opacity: none;
+        padding-bottom: 0;
+    }
+
+    .btn {
+    }
+
 }
 
 #contact {
-  background: rgb(245, 245, 245); /* This is for ie8 and below */
-  background: rgba(245, 245, 245, 0.65);
-  @include shadow(0.5);
+    background: rgb(245, 245, 245);
+    /* This is for ie8 and below */
+    background: rgba(245, 245, 245, 0.65);
+    @include shadow(0.5);
 
-  a {
-    text-decoration: none;
-  }
-  h1 {
-    padding-bottom: 15px;
-  }
-
-  img {
-
-  }
-
-  ul {
-    list-style: none;
-    li {
-    display: table-cell;
+    a {
+        text-decoration: none;
     }
-  }
 
-  table {
-    td {
-      padding-right: 20px;
+    h1 {
+        padding-bottom: 15px;
     }
-  }
+
+    ul {
+        list-style: none;
+
+        li {
+            display: table-cell;
+        }
+    }
+
+    table {
+        td {
+            padding-right: 20px;
+        }
+    }
 }
-
 /*footer*/
-
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray;
-  color: #777;
-  a {
-    color: $gray;
-    &:hover {
-      text-decoration: none;
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-}
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $gray;
+    color: #777;
 
+    a {
+        color: $gray;
+
+        &:hover {
+            text-decoration: none;
+            color: $gray-darker;
+        }
+    }
+
+    small {
+        float: left;
+    }
+
+    ul {
+        float: right;
+        list-style: none;
+
+        li {
+            float: left;
+            margin-left: 15px;
+        }
+    }
+}
 
 .container-static {
-  margin-top: 20px;
- padding: 30px;
- margin-bottom: 30px;
- background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255, 255, 255,0.6) 100%);
-  @include shadow(0.25);
- h1 {
-   font-size: 2.7em;
-   font-weight: bold;
-   font-family: 'Bungee Shade', cursive;
- }
- h2 {
-   font-size: 3em;
-   font-weight: bold;
-   letter-spacing: 1px;
- }
- p {
-   font-size: 2em;
-   color: $gray-darker;
- }
+    margin-top: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255, 255, 255,0.6) 100%);
+    @include shadow(0.25);
+
+    h1 {
+        font-size: 2.7em;
+        font-weight: bold;
+        font-family: 'Bungee Shade', cursive;
+    }
+
+    h2 {
+        font-size: 3em;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 2em;
+        color: $gray-darker;
+    }
 }
 
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+.uneditable-input,
+input,
+select,
+textarea {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
 }
 
 input {
-  height: auto !important;
+    height: auto !important;
 }
 
 #error_explanation {
-  color: $state-danger-text;
-  ul {
     color: $state-danger-text;
-    margin: 0 0 30px 0;
-  }
+
+    ul {
+        color: $state-danger-text;
+        margin: 0 0 30px;
+    }
 }
 
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-    border-width: 5px;
-  }
+    @extend .has-error;
+
+    .form-control {
+        color: $state-danger-text;
+        border-width: 5px;
+    }
 }

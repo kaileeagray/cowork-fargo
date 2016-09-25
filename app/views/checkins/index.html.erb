@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Checkins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Start</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checkins.each do |checkin| %>
+      <tr>
+        <td><%= checkin.latitude %></td>
+        <td><%= checkin.longitude %></td>
+        <td><%= checkin.name %></td>
+        <td><%= checkin.address %></td>
+        <td><%= checkin.start %></td>
+        <td><%= checkin.user %></td>
+        <td><%= link_to 'Show', checkin %></td>
+        <td><%= link_to 'Edit', edit_checkin_path(checkin) %></td>
+        <td><%= link_to 'Destroy', checkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Checkin', new_checkin_path %>

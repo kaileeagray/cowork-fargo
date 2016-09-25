@@ -1,14 +1,14 @@
 <header class="navbar navbar-fixed-top">
   <div class="container">
     <%unless current_page?(root_path)%>
-    <%= link_to "Cowork Fargo", root_path, id: "logo" %>
+      <%= link_to "Cowork Fargo", root_path, id: "logo" %>
     <%end%>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Follow Coworkers", '#'%></li>
+        <li><%= link_to "Follow Coworkers", users_path%></li>
         <li><%= link_to "Live Coworkers", map_path%></li>
-        <li><%= link_to "Sign Up", signup_path%></li>
-        <li><%= link_to "Log In", '#'%></li>
+        <!-- <li><%= link_to "Sign Up", signup_path%></li>
+        <li><%= link_to "Log In", '#'%></li> -->
       </ul>
     </nav>
   </div>

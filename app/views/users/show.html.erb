@@ -1,11 +1,3 @@
 <% provide(:title, @user.name)%>
 
-<div class="container-static">
-  <h2> <%= gravatar_for @user %>
-    <%= @user.name %>
-  </h2>
-
-  <p>
-    hello!
-  </p>
-</div>
+<%= render @user %>
