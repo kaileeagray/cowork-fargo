@@ -32,7 +32,7 @@ class CheckinsController < ApplicationController
   def create
     @checkin = Checkin.new(checkin_params)
     if @checkin.save
-      redirect_to root_path, notice: 'Checkin was successfully created.'
+      redirect_to map_path, notice: 'Checkin was successfully created.'
     else
       render action: 'new'
     end
